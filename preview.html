@@ -29,7 +29,7 @@ window.__ModuleLoader__ = {
     const require = (name) => {
       if (name === "react/jsx-runtime") return { jsx(){}, jsxs(){}, Fragment(){} };
       if (name === "react") return { useRef: () => ({}), useState: (v) => [v, () => {}] };
-      if (name === "@deepseek-ai/dsh-client-runtime/client") return { defineStore: (d) => d };
+      if (name === "@deepseek-ai/dsh-client-store") return { defineStore: (d) => d };
       throw new Error("no stub for " + name);
     };
     window.DSH_SKIN = spec.factory(require);

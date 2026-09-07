@@ -165,6 +165,6 @@ The client bundle is written directly in the `__ModuleLoader__` bundle format
 (the same shape tsdown emits for the shipped `ui-*` packages), so no build step
 is required. `lib/client.js` may `require` only module-table entities: platform
 seed words (`react`, `react/jsx-runtime`, …) and registered client bundles
-(`@deepseek-ai/dsh-client-runtime/client`, `@deepseek-ai/dsh-client-ui-theme/client`,
+(`@deepseek-ai/dsh-client-store`, `@deepseek-ai/dsh-client-ui-theme/client`,
 …). After editing, restart the web server (bundle content is re-hashed and
 served with a new `rev`; loader entries are rescanned at boot).
